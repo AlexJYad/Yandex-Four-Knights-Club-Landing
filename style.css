@@ -10,17 +10,20 @@
 body {
    font-size: 16px;
    font-family: "Golos Text", sans-serif;
+   font-optical-sizing: auto;
    display: grid;
    grid-template-columns: 100vw;
    grid-template-rows: 100vh repeat(5, auto);
    gap: 30px;
+   color: #313131;
 }
 
 h1 {
    text-transform: uppercase;
-   font-size: 1rem;
+   font-family: "Golos Text", sans-serif;
+   font-size: 16.65px;
    font-weight: 700;
-   line-height: 1rem;
+   line-height: 17.98px;
    letter-spacing: 0.01em;
 }
 
@@ -88,19 +91,31 @@ span.line {
 
 main {
    background-color: #e9ded4;
+   background-image: url(./img/main.png);
+   background-size: auto calc(100vh - 60px);
+   background-repeat: no-repeat;
+   background-position: top center;
    .logo {
       display: flex;
       color: #595653;
       height: 36px;
-      position: relative;
-      width: 255px;
-      top: 26px;
-      left: 72px;
+      width: 245.17px;
+      margin-top: 26px;
+      margin-left: 72px;
+      padding: 2px 0 2px 0;
+      align-items: center;
+      h2 {
+         width: 147px;
+         flex-shrink: 0;
+      }
       .img {
-         padding-right: 0.5rem;
+         display: flex;
+         align-items: center;
+         padding-right: 6px;
       }
       img {
-         height: calc(1rem * 2);
+         width: 21.65px;
+         height: 31.18px;
       }
    }
 
@@ -111,8 +126,8 @@ main {
       justify-content: space-between;
       width: 542px;
       height: 444px;
-      top: 124px;
-      left: 72px;
+      margin-top: 70px;
+      margin-left: 72px;
       gap: 0px;
       opacity: 0px;
 
@@ -126,7 +141,7 @@ main {
          }
       }
       p {
-         margin: 10px;
+         margin-top: 24px;
          font-family: Golos Text;
          font-size: 18px;
          font-weight: 400;
@@ -134,14 +149,21 @@ main {
          text-align: center;
       }
       .btns {
+         margin-top: 40px;
          display: flex;
          justify-content: space-between;
       }
 
       button {
+         display: flex;
+         justify-content: center;
+         align-items: center;
          width: 263px;
          height: 72px;
-         padding: 20px;
+         font-family: "Golos Text";
+         font-size: 16px;
+         font-weight: 500;
+         line-height: 20.8px;
       }
    }
 }
@@ -183,12 +205,35 @@ main {
 }
 
 article {
-   margin: 50px 72px 0 72px;
+   margin: 0px 72px 0 72px;
 }
 
 article.flex {
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+
+article.one {
+   h3 {
+      width: 764px;
+      height: 195.43px;
+   }
+   img {
+      width: 394px;
+      height: 250px;
+   }
+   margin: 80px;
+}
+
+article.two {
+   h3 {
+   }
+   img {
+      width: 474px;
+      height: 527px;
+   }
+   margin: 64px;
 }
 
 .grid-table {
@@ -312,7 +357,7 @@ article.flex {
 }
 
 .carousel {
-   width: calc(100vw - (72px * 2));
+   /* width: calc(100vw - (72px * 2)); */
    overflow: hidden;
 }
 

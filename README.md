@@ -4,8 +4,23 @@
 
 - [ ] Доделать a:hover
 - [ ] Телефонную версию
+  - [ ] main
+  - [ ] section 1
+  - [ ] section 2
+  - [ ] section 3
+  - [ ] footer
 - [ ] Вывреку размеров
+  - [x] main
+  - [x] section 1
+  - [ ] section 2
+  - [ ] section 3
+  - [ ] footer
 - [ ] Картинки
+  - [x] main
+  - [x] photo
+  - [x] collage
+  - [ ] airplan
+  - [ ] portert
 - [ ] Улучшить CSS
   - [ ] подправить классы
   - [ ] подправить повтораймость
