@@ -90,7 +90,7 @@ span.line {
 }
 
 main {
-   /* background-color: #e9ded4; */
+   background-color: #e9ded4;
    background-image: url(./img/main.png);
    background-size: auto calc(100vh - 60px);
 
