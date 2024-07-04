@@ -177,6 +177,7 @@ main {
          font-size: 16px;
          font-weight: 500;
          line-height: 20.8px;
+         padding: 0px 50px;
       }
    }
 }
@@ -293,6 +294,15 @@ article.two {
       padding-right: 15px;
    }
 }
+.carousel-2 {
+   position: relative;
+   img {
+      position: absolute;
+      top: 30%;
+      right: -70px;
+      z-index: 10;
+   }
+}
 
 .grid {
    display: grid;
@@ -338,6 +348,7 @@ article.two {
 
    .grid-7 {
       grid-area: grid-7;
+      padding-right: 40%;
    }
 
    img {
@@ -362,6 +373,25 @@ article.two {
    justify-content: center;
 }
 
+.second-g {
+   display: grid;
+   grid-template-areas:
+      "grid-1 grid-2"
+      "grid-3 grid-3";
+   .name {
+      grid-area: grid-1;
+   }
+   .carousel-btn {
+      grid-area: grid-2;
+      align-self: center;
+      justify-self: end;
+   }
+   .carousel {
+      grid-area: grid-3;
+      width: 100%;
+   }
+}
+
 .carousel-btn {
    display: flex;
    justify-content: space-between;
@@ -374,14 +404,15 @@ article.two {
       align-items: center;
       justify-content: center;
       padding: 0;
-      button {
-         width: 44px;
-         height: 44px;
-         font-size: 40px;
-         font-family: "Manrope", sans-serif;
-         line-height: 40px;
-      }
    }
+}
+
+button.carousel-button {
+   width: 44px;
+   height: 44px;
+   font-size: 40px;
+   font-family: "Manrope", sans-serif;
+   line-height: 40px;
 }
 
 .carousel {
@@ -475,6 +506,10 @@ a:hover {
    text-decoration: none;
 }
 
+.mobile-visible {
+   display: none !important;
+}
+
 @media (min-width: 1366px) {
    main,
    article {
@@ -483,6 +518,10 @@ a:hover {
 }
 
 @media (max-width: 1000px) {
+   .mobile-visible {
+      display: block !important;
+   }
+
    body {
       grid-template-columns: 100vw;
       grid-template-rows: 812px repeat(5, auto);
@@ -502,7 +541,7 @@ a:hover {
       overflow: hidden;
       width: 100%;
       background-repeat: no-repeat;
-      background-position: center calc(100% - 60px);
+      background-position: center calc(100% - 57px);
       background-image: url(./img/main2.png);
       position: relative;
 
@@ -532,6 +571,7 @@ a:hover {
             button {
                height: 47px;
                width: 100%;
+               padding: 0px;
             }
          }
       }
@@ -583,19 +623,126 @@ a:hover {
       }
    }
 
-   button.white {
-      background: rgba(255, 255, 255, 0.8);
-      color: black;
-      border: none;
+   .carousel-track-container {
+      overflow: hidden;
+      width: 100%;
    }
 
-   button.white:hover {
+   .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in;
+   }
+
+   .grid {
+      grid-template-rows: repeat(2, calc(335px / 2));
+      grid-template-columns: repeat(5, calc(100vw - 40px));
+      grid-template-areas:
+         "grid-1 grid-3 grid-4 grid-6 grid-7"
+         "grid-2 grid-3 grid-5 grid-6 grid-7";
+      gap: 0px 50px;
+      p {
+         width: 100%;
+      }
+      margin-bottom: 30px;
+   }
+
+   .block {
+      flex-direction: column;
+      align-items: start;
+   }
+
+   .carousel-2 {
+      img {
+         top: 0;
+         left: 0;
+      }
+      padding-top: 80px;
+   }
+
+   .grid {
+      div.grid-1,
+      div.grid-3,
+      div.grid-4,
+      div.grid-6,
+      div.grid-7 {
+         padding-top: 55px;
+         padding-right: 20px;
+      }
+   }
+
+   .use {
+      display: flex !important;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0px 15%;
+   }
+
+   .carousel-pagination {
+      display: flex;
+      gap: 5px;
+   }
+
+   .carousel-pagination button {
+      background: #ddd;
+      border: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+   }
+
+   .carousel-pagination button.active {
       background: black;
-      color: white;
-      border: none;
    }
 
+   .second-g {
+      display: grid;
+      grid-template-areas:
+         "grid-1"
+         "grid-3"
+         "grid-2";
+      .carousel-btn {
+         justify-self: center;
+      }
+      margin-bottom: 100px;
+   }
+
+   .slide {
+      height: 502px;
+      width: 100%;
+   }
+
+   .carousel {
+      margin-bottom: 40px;
+
+      button.white {
+         background: rgba(255, 255, 255, 0.8);
+         color: black;
+         border: none;
+      }
+
+      button.white:hover {
+         background: black;
+         color: white;
+         border: none;
+      }
+   }
    main {
       height: 812px;
+   }
+
+   footer {
+      height: auto;
+      padding: 98px 33px 38px 33px;
+   }
+
+   .desktop-only {
+      display: none !important;
+   }
+
+   .one img {
+      margin: 20px 0;
    }
 }
