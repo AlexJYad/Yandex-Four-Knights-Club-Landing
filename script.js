@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
    function goToSlide(index) {
       currentIndex = Math.min(Math.max(index, 0), totalSlides - 1);
       slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      console.log(currentIndex, slideWidth);
       updateCounter();
       updateButtonState();
    }
