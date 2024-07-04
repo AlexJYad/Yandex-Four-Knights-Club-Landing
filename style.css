@@ -638,7 +638,8 @@ a:hover {
       width: calc(100vw - 40px);
       padding: 0;
       margin: 20px;
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
       h3 {
          width: auto;
          height: auto;
