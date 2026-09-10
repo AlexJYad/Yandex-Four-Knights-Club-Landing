@@ -98,10 +98,3 @@ cd Yandex-Four-Knights-Club-Landing
 - [ ] Add the spinning-disc animation in the "Transformation stages" section
 - [ ] Fix the page `<title>` (currently the placeholder `Document`)
 
----
-
-## 👤 Author
-
-**Aleksandr Iakovlev (AlexJYad)**
-[GitHub](https://github.com/AlexJYad) · Gijón, Asturias, Spain
-
